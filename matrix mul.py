@@ -46,3 +46,23 @@ l1 = [[1,2,3],[1,2,3]]
 l2 = [1,2,3,4,5]
 l3 = [1,2,3,4,5]
 print(mulArray(l2,l3))
+
+# Python program to multiply two matrices without numpy
+
+m1 = [[10, 11, 12],
+      [13, 14, 15],
+      [16, 17, 18]]
+m2 = [[9, 8, 7],
+      [6, 5, 4],
+      [3, 2, 1]]
+res = [[0, 0, 0],
+       [0, 0, 0],
+       [0, 0, 0]]
+
+# multiply matrix
+for i in range(len(m1)):
+   for j in range(len(m2[0])):
+      for k in range(len(m2)):
+         res[i][j] += m1[i][k] * m2[k][j]
+for r in res:
+   print(r)
